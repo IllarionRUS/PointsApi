@@ -1,21 +1,21 @@
-Mongo Shell команды:
+Mongo Shell РєРѕРјР°РЅРґС‹:
 
-Подключаемся к БД(будет создана если не существует)
+РџРѕРґРєР»СЋС‡Р°РµРјСЃСЏ Рє Р‘Р”(Р±СѓРґРµС‚ СЃРѕР·РґР°РЅР° РµСЃР»Рё РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚)
 use PointstoreDb
 
-Создаем коллекции
+РЎРѕР·РґР°РµРј РєРѕР»Р»РµРєС†РёРё
 db.createCollection('Orders')
 db.createCollection('Points')
 
-Добавляем точки доставки
+Р”РѕР±Р°РІР»СЏРµРј С‚РѕС‡РєРё РґРѕСЃС‚Р°РІРєРё
 db.Points.insertMany([{'_id':'PT-0001','Address':'Address1','Status':true},{'_id':'PT-0002','Address':'Address2','Status':false},{'_id':'PT-0003','Address':'Address3','Status':true},{'_id':'PT-0004','Address':'Address4','Status':true},{'_id':'PT-0005','Address':'Address5'}])
 
-Api запросы
+Api Р·Р°РїСЂРѕСЃС‹
 https://localhost:44394/api/points
 https://localhost:44394/api/points/PT-0001
 https://localhost:44394/api/orders/
 
-Cоздание заказа
+CРѕР·РґР°РЅРёРµ Р·Р°РєР°Р·Р°
 https://localhost:44394/api/orders
 Body
 {'Id':'1112',
